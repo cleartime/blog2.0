@@ -1,23 +1,21 @@
 <template>
-	<div class="app">
-		<img src="./assets/code.png">
-		{{abc}}
+	<div>
+		
 	</div>
 </template>
 
 <script>
 export default {
 
-  name: 'app',
+  name: 'main',
 
   data () {
     return {
-		abc: 123123
+    	
     }
   }
 }
 </script>
 
 <style lang="css" scoped>
-
 </style>

@@ -4,8 +4,5 @@ import App from './App'
 
 export default new Vue({
   el: '#app',
-  template: '<App/>',
-  components: {
-    App
-  }
+  render:h=>h(App)
 });
