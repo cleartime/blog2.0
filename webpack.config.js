@@ -12,8 +12,17 @@ const config = {
     path: resolve('dist'),
     filename: 'js/[name].[chunkhash].js'
   },
- resolve: {  //导入的时候不用写拓展名
-      extensions: [' ', '.js', '.json', '.vue', '.scss', '.css']
+
+  resolve: {  //导入的时候不用写拓展名
+      extensions: [' ', '.js', '.json', '.vue', '.sass', '.scss', '.css'],
+      alias: { // 别名
+        'asstes': resolve('src/asstes'),
+        'style': resolve('src/style'),
+        'views': resolve('src/views'),
+        'components': resolve('src/components'),
+        'mixins': resolve('src/mixins'),
+        'router': resolve('src/router'),
+      }
   },
   watchOptions: {
       ignored: /node_modules/,
@@ -39,7 +48,17 @@ const config = {
         },
         include: [resolve('src')],
       },
-       { 
+      {
+        test: /\.sass$/,
+        use: [{
+            loader: "style-loader" // 将 JS 字符串生成为 style 节点
+        }, {
+            loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
+        }, {
+            loader: "sass-loader" // 将 Sass 编译成 CSS
+        }]
+      },
+      { 
         test: /\.(png|jpg|gif)$/, 
         use: [{ loader: 'url-loader',options: { limit: 8192 } }] 
       }

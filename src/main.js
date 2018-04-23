@@ -1,8 +1,14 @@
 import Vue from 'vue'
 import App from './App'
+import VueRouter from 'vue-router'
+import router from 'router'
+import 'style/common'
+
+Vue.use(VueRouter)
+
 
 
 export default new Vue({
-  el: '#app',
-  render:h=>h(App)
-});
+  router,
+  render: h=>h(App)
+}).$mount('#app');
