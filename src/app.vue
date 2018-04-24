@@ -5,6 +5,7 @@
 </template>
 
 <script>
+
 export default {
 
   name: 'app',
@@ -17,6 +18,6 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="stylus" scoped>
 
 </style>

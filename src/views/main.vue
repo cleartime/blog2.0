@@ -1,10 +1,11 @@
 <template>
-	<div>
+	<div class="main">
 		main
 	</div>
 </template>
 
 <script>
+
 export default {
 
   name: 'amain',
@@ -17,5 +18,9 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="stylus" scoped>
+.main
+    width 100vw
+    height 100vh
+    background gb
 </style>
