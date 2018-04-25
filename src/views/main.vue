@@ -20,7 +20,5 @@ export default {
 
 <style lang="stylus" scoped>
 .main
-    width 100vw
-    height 100vh
-    background gb
+    background a
 </style>
